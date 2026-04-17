@@ -69,7 +69,7 @@ export function NoteForm({
           value={title}
           maxLength={TITLE_MAX}
           onChange={(e) => setTitle(e.target.value)}
-          aria-invalid={showErrors && Boolean(errors.title)}
+          aria-invalid={Boolean(showErrors && errors.title)}
           aria-describedby={
             showErrors && errors.title ? "note-title-error" : undefined
           }
@@ -95,7 +95,7 @@ export function NoteForm({
           rows={8}
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          aria-invalid={showErrors && Boolean(errors.content)}
+          aria-invalid={Boolean(showErrors && errors.content)}
           aria-describedby={
             showErrors && errors.content ? "note-content-error" : undefined
           }

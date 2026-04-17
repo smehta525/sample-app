@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|create_file|replace_string_in_file|multi_replace_string_in_file",
+        "type": "command",
+        "command": "./.github/hooks/scripts/lint-format.sh",
+        "timeout": 60
+      }
+    ]
+  }
+}
